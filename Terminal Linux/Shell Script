@@ -1,0 +1,39 @@
+SHELL SCRIPT
+
+1. Comandos: 
+	(a) cd: navegar entre os diretorios (cd / ou cd ~ ou cd -)
+		- Obs.: . = indica o diretorio atual.	
+	(b) ls ou ll: listar o conteudo do diretorio corrente;
+		- Obs.: ls -l = em forma de lista;
+		        ls -la = arquivos ocultos;
+		        ls lt ou ls ltr = ordena por ordem de tempo;
+		        ls lS ou ls lSr = ordena por tamanho;
+	(c) clear = CTRl + L;
+	(d) pwd: indicar o diretorio q estamos;
+	(e) mkdir: criar um novo diretorio;
+		Obs.: mkdir <pasta>/<pasta1>;
+		      mkdir  -p <pasta>...;
+	(f) mv: mover e renomear arquivos;
+		Obs.: mv <origem> <destino>;
+		      mv <nome_i> <nome_f>;
+	(g) touch = mudar data de um arquivo ou criar um arquivo;
+	(h) rm = remover um arquivo;
+		Obs.: rmdir ou rm -r = remover diretorio;
+		      -rf = f de forcar;
+	(i) cp = copiar arquivos;
+		Obs.: cp <arquivo> <diretorio>;
+		      cp -r = copiar pastas;
+		      cp a* = copiar todos os arquivos q comecam com a;
+		      cp -v = mostra o que esta sendo copiado;
+	(j) find = procurar;
+		Obs.: find <diretorio> -name "<arquivo>";
+		      iname = ignore case;
+	(k) nano = edita arquivo;
+		Obs.: nano <arquivo>;
+	(l) cat = mostra o conteudo do arquivo;
+		Obs.: cat <arquivo>;
+	(m) grep = procura com base em uma string;
+		Exemplo: grep motor -r <diretorio>;
+		         grep motor <arquivo>;
+		         -r = recursivo;
+		         -n = linha;
