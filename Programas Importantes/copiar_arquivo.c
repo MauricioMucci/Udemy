@@ -7,14 +7,20 @@ int main(int argc, char const *argv[])
 {
     FILE *file1, *file2;
 
-    if ((file1 = fopen("arq.txt","r")) == NULL)
+   file1 = fopen("original.txt","w");
+
+   fprintf(file1,"Hello World!\n");
+
+   fclose(file1);
+    
+
+    if ((file1 = fopen("original.txt","r")) == NULL)
     {
         printf("Unable to access the requested file!\n");
-        getchar();
-        return 0;
+        exit(1);
     }
 
-    file2 = fopen("arq4.txt", "w");
+    file2 = fopen("copia.txt", "w");
 
     copia_arquivo(file1, file2);
 
@@ -26,9 +32,9 @@ int main(int argc, char const *argv[])
 
 void copia_arquivo(FILE *file1, FILE *file2)
 {
-    char read_file[1000];
+    char read_file[50];
 
-    while (fgets(read_file,1000,file1))
+    while (fgets(read_file,50,file1))
     {
         fputs(read_file, file2);
     }
