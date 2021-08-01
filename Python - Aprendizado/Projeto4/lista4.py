@@ -1,7 +1,3 @@
-# Questao 1
-from typing import Counter
-
-
 def QuestaoUm():
     print("\t[ Questao 1 ]")
     a = [1, 0, 5, -2, -5, 7]
@@ -10,8 +6,6 @@ def QuestaoUm():
     print(a)
     print(f"Soma = {soma}")
 
-# Questao 2
-
 
 def QuestaoDois():
     print("\t[ Questao 2 ]")
@@ -19,8 +13,6 @@ def QuestaoDois():
     for _ in range(6):
         array.append(int(input("\nDigite um inteiro: ")))
     print(array)
-
-# Questao 3
 
 
 def QuestaoTres():
@@ -39,8 +31,6 @@ def QuestaoTres():
         array2.append(array1[i] ** 2)
 
     print(f"{array1}\n{array2}")
-
-# Questao 4
 
 
 def QuestaoQuatro():
@@ -69,8 +59,6 @@ def QuestaoQuatro():
     soma = array[pos1] + array[pos2]
     print(f"{array[pos1]} + {array[pos1]} = {soma}")
 
-# Questao 5
-
 
 def QuestaoCinco():
     print("\t[ Questao 5 ]")
@@ -83,8 +71,6 @@ def QuestaoCinco():
             counter += 1
     print(f"Existe {counter} numeros pares")
 
-# Questao 6
-
 
 def QuestaoSeis():
     print("\t[ Questao 6 ]")
@@ -92,8 +78,6 @@ def QuestaoSeis():
     for _ in range(10):
         array.append(int(input("\nDigite um inteiro: ")))
     print(f"Maior valor = {max(array)}\nMenor valor = {min(array)}")
-
-# Questao 7
 
 
 def QuestaoSete():
@@ -103,8 +87,6 @@ def QuestaoSete():
         array.append(int(input("\nDigite um inteiro: ")))
     print(
         f"Maior valor = {max(array)}\nPosicao do maior valor = {array.index(max(array))}")
-
-# Questao 8 e 9
 
 
 def QuestaoOitoNove():
@@ -238,6 +220,20 @@ def QuestaoVinteQuatro():
                 f"Aluno #{id[i]} - Altura = {min(altura)}")
 
 
+def QuestaoVinteCinco():
+    print("\t[ Questao 25 ]")
+    array = []
+
+    i = 0
+    while len(array) < 100:
+        if i % 7 != 0 and i % 10 != 0:
+            array.append(i)
+        i += 1
+
+    print(array)
+    print(len(array))
+
+
 def Main():
     ''' 
     LISTAS
@@ -255,10 +251,12 @@ def Main():
     QuestaoTreze()
     QuestaoQuatorze()
     QuestaoQuinze()
-    '''
-    # Tuplas
-    # QuestaoVinteTres()
+    QuestaoVinteCinco()
+
+    Tuplas
+    QuestaoVinteTres()
     QuestaoVinteQuatro()
+    '''
 
 
 Main()
