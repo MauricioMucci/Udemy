@@ -10,6 +10,7 @@ SHELL SCRIPT
 		        ls lS ou ls lSr = ordena por tamanho;
 	(c) clear = CTRl + L;
 	(d) pwd: indicar o diretorio q estamos;
+	(especial) whoami: indica o usuario;
 	(e) mkdir: criar um novo diretorio;
 		Obs.: mkdir <pasta>/<pasta1>;
 		      mkdir  -p <pasta>...;
