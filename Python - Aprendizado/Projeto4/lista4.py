@@ -340,8 +340,10 @@ def MatrizSeis():
         array1.append(array2)
 
     maiores = []
+    j = 0
     for i in array1:
-        maiores.append(max(i))
+        maiores.append((max(i), j, i.index(max(i))))
+        j += 1
 
     for i in array1:
         print(i)
@@ -349,9 +351,160 @@ def MatrizSeis():
     print(f"Maiores = {maiores}")
 
 
+def MatrizSete():
+    array1 = []
+    for i in range(10):
+        array2 = []
+        for j in range(10):
+            if i < j:
+                array2.append(2 * i + 7 * j)
+            elif i == j:
+                array2.append(3 * i ** 2 - 1)
+            else:
+                array2.append(4 * i ** 3 - 5 * j ** 2 - 1)
+        array1.append(array2)
+
+    for i in array1:
+        print(i)
+
+
+def MatrizOito():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            if i < j:
+                array2.append(2 * i + 7 * j)
+            elif i == j:
+                array2.append(3 * i ** 2 - 1)
+            else:
+                array2.append(4 * i ** 3 - 5 * j ** 2 - 1)
+        array1.append(array2)
+
+    """
+    soma = 0
+    j = 1
+    for i in array1:
+        soma += sum(i[j:])
+        j += 1
+        if j == len(i):
+            break
+    """
+
+    soma = 0
+    for i in range(5):
+        for j in range(5):
+            if j > i:
+                soma += array1[i][j]
+
+    for i in array1:
+        print(i)
+
+    print(f"Soma = {soma}")
+
+
+def MatrizNove():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            if i < j:
+                array2.append(2 * i + 7 * j)
+            elif i == j:
+                array2.append(3 * i ** 2 - 1)
+            else:
+                array2.append(4 * i ** 3 - 5 * j ** 2 - 1)
+        array1.append(array2)
+
+    soma = 0
+    for i in range(5):
+        for j in range(5):
+            if i > j:
+                soma += array1[i][j]
+
+    for i in array1:
+        print(i)
+
+    print(f"Soma = {soma}")
+
+
+def MatrizDez():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            if i < j:
+                array2.append(2 * i + 7 * j)
+            elif i == j:
+                array2.append(3 * i ** 2 - 1)
+            else:
+                array2.append(4 * i ** 3 - 5 * j ** 2 - 1)
+        array1.append(array2)
+
+    soma = 0
+    for i in range(5):
+        for j in range(5):
+            if i == j:
+                soma += array1[i][j]
+
+    for i in array1:
+        print(i)
+
+    print(f"Soma = {soma}")
+
+
+def MatrizOnze():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            if i < j:
+                array2.append(2 * i + 7 * j)
+            elif i == j:
+                array2.append(3 * i ** 2 - 1)
+            else:
+                array2.append(4 * i ** 3 - 5 * j ** 2 - 1)
+        array1.append(array2)
+
+    soma = 0
+    j = 4
+    for i in array1:
+        soma += i[j]
+        j -= 1
+
+    for i in array1:
+        print(i)
+
+    print(f"Soma = {soma}")
+
+
+def MatrizDoze():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            if i < j:
+                array2.append(2 * i + 7 * j)
+            elif i == j:
+                array2.append(3 * i ** 2 - 1)
+            else:
+                array2.append(4 * i ** 3 - 5 * j ** 2 - 1)
+        array1.append(array2)
+
+    for i in array1:
+        print(i)
+
+    for i in range(5):
+        for j in range(5):
+            if i < j:
+                array1[i][j] = 0
+
+    for i in array1:
+        print(i)
+
+
 def Main():
-    ''' 
-    LISTAS
+    # LISTAS
     QuestaoUm()
     QuestaoDois()
     QuestaoTres()
@@ -368,18 +521,23 @@ def Main():
     QuestaoQuinze()
     QuestaoVinteCinco()
 
-    Tuplas
+    # Tuplas
     QuestaoVinteTres()
     QuestaoVinteQuatro()
 
-    Matriz
-    '''
-    # MatrizUm()
-    # MatrizDois()
-    # MatrizTres()
-    # MatrizQuatro()
-    # MatrizCinco()
+    # Matriz
+    MatrizUm()
+    MatrizDois()
+    MatrizTres()
+    MatrizQuatro()
+    MatrizCinco()
     MatrizSeis()
+    MatrizSete()
+    MatrizOito()
+    MatrizNove()
+    MatrizDez()
+    MatrizOnze()
+    MatrizDoze()
 
 
 Main()
