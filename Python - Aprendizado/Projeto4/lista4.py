@@ -234,6 +234,121 @@ def QuestaoVinteCinco():
     print(len(array))
 
 
+def MatrizUm():
+    array1 = []
+    for _ in range(4):
+        array2 = []
+        for _ in range(4):
+            array2.append(int(input("\nDigite um inteiro: ")))
+        array1.append(array2)
+
+    counter = 0
+    for i in range(4):
+        for j in range(4):
+            if array1[i][j] > 10:
+                counter += 1
+
+    print(f"Matriz = {array1}\nNumeros maiores que 10 = {counter}")
+
+
+def MatrizDois():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            if i == j:
+                array2.append(1)
+            else:
+                array2.append(0)
+        array1.append(array2)
+
+    # Forma 1
+    for i in array1:
+        print(i)
+    # Forma 2
+    for i in array1:
+        for j in i:
+            print(j, end=" ")
+        print()
+    # Forma 3
+    print(f"Matriz = {array1}")
+
+
+def MatrizTres():
+    array1 = []
+    for i in range(5):
+        array2 = []
+        for j in range(5):
+            array2.append(i*j)
+        array1.append(array2)
+
+    # Forma 1
+    for i in array1:
+        print(i)
+    # Forma 2
+    for i in array1:
+        for j in i:
+            print(j, end=" ")
+        print()
+    # Forma 3
+    print(f"Matriz = {array1}")
+
+
+def MatrizQuatro():
+    array1 = []
+    for i in range(4):
+        array2 = []
+        for j in range(4):
+            array2.append(int(input("\nDigite um inteiro: ")))
+        array1.append(array2)
+
+    maior = array1[0][0]
+    for i in range(4):
+        for j in range(4):
+            if array1[i][j] > maior:
+                maior = array1[i][j]
+    print(maior)
+
+
+def MatrizCinco():
+    array1 = []
+    for _ in range(3):
+        array2 = []
+        for _ in range(3):
+            array2.append(int(input("\nDigite um inteiro: ")))
+        array1.append(array2)
+
+    x = int(input("\nDigite o numero a ser procurado: "))
+
+    for i in range(3):
+        for j in range(3):
+            if x == array1[i][j]:
+                pos = i, j
+
+    for i in array1:
+        print(i)
+
+    print(f"A posicao do numero: {pos}")
+
+
+def MatrizSeis():
+    array1 = []
+    for i in range(4):
+        array2 = []
+        for j in range(4):
+            array2.append(int(input("\nDigite um inteiro: ")))
+        array1.append(array2)
+
+    maiores = []
+    for i in array1:
+        maiores.append(max(i))
+
+    for i in array1:
+        print(i)
+
+    print(f"Maiores = {maiores}")
+
+
 def Main():
     ''' 
     LISTAS
@@ -256,7 +371,15 @@ def Main():
     Tuplas
     QuestaoVinteTres()
     QuestaoVinteQuatro()
+
+    Matriz
     '''
+    # MatrizUm()
+    # MatrizDois()
+    # MatrizTres()
+    # MatrizQuatro()
+    # MatrizCinco()
+    MatrizSeis()
 
 
 Main()
