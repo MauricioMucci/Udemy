@@ -1,5 +1,5 @@
 # Udemy
-## _Repositório de cursos sobre algumas linguagens de porgramacao da Udemy_
+## _Repositório de cursos sobre algumas linguagens de programação da Udemy_
 
 #### Tecnologias Utilizadas 💻
 
